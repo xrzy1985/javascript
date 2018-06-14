@@ -37,6 +37,15 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -50,11 +59,40 @@
           <p class="lead">This page will mainly for testing purposes.</p>
           <ul class="list-unstyled">
             <li>Boostrap 4, HTML5, CSS3, and Javascript (obviously)</li>
-        			<div style="padding:50px; min-height: 700px; min-width: 700px;">
 
-        				<!-- YOUR CODE GOES RIGHT HERE -->
+            <div style="padding:50px; min-height: 700px; min-width: 700px;">
 
-        			</div>
+            <hr/>
+
+            <h3>Simple User Input</h3>
+            
+            <p id="sayHello">...</p>
+
+            <p>
+              The big problem with using the prompt for user input is the
+              fear of injection attacks. If someone wanted to, they could
+              code in a lot of damaging code in the input box.
+            </p>
+
+
+            <script>
+              // create a variable userName
+              // that will prompt the user to enter their name
+              var userName = prompt("What is your name?");
+
+              //
+              if(userName != null){
+                document.getElementById("sayHello").innerHTML = "Hello " + userName;
+              }else{
+                alert("Enter your proper name next time");
+                userName = "Loser McSuckenstein Jr";
+                document.getElementById("sayHello").innerHTML = "Hello " + userName;
+              }
+            </script>
+
+            <hr/>
+
+          </div>
           </ul>
         </div>
       </div>
