@@ -50,9 +50,10 @@
           <p class="lead">This page will mainly for testing purposes.</p>
           <ul class="list-unstyled">
             <li>Boostrap 4, HTML5, CSS3, and Javascript (obviously)</li>
+
         			<div style="padding:50px; min-height: 700px; min-width: 700px;">
 
-                <hr/>
+        				<hr/>
 
         				<h3>Math Functions</h3>
 
@@ -60,14 +61,32 @@
         				<p id="two">...</p>
         				<p id="three">...</p>
         				<p id="four">...</p>
-                <p id="five">...</p>
+        				<p id="five">...</p>
+        				<p id="six">...</p>
+        				<p id="seven">...</p>
+        				<p id="eight">...</p>
+        				<small>notice how the variable did not change, but the actual value is 6.</small>
+        				<p></p>
+        				<p id="nine">...</p>
+        				<p id="ten">...</p>
+        				<p id="eleven">...</p>
+        				<p id="twelve">...</p>
+        				<p id="thirteen">...</p>
+        				<p id="fourteen">...</p>
+        				<p id="fifteen">...</p>
 
         				<script>
 
         					// create a variable userName
         					// that will prompt the user to enter their name
         					var n1 = 5;
+        					var n3 = 5;
         					var n2 = 9;
+        					var n4 = 9;
+        					var n5 = 1;
+        					var n6 = 2;
+        					var n7 = 3;
+        					var n8 = 4;
 
         					document.getElementById("one").innerHTML = "Addition: 5 + 9 = " + (n1 + n2) + "<br/>";
 
@@ -77,11 +96,37 @@
 
         					document.getElementById("four").innerHTML = "Division: 5 / 9 = " + (n1 / n2) + "<br/>";
 
-                  	document.getElementById("four").innerHTML = "Mod: 5 modulus 9 = " + (n1 %n2) + "<br/>";
+        					document.getElementById("five").innerHTML = "Maximum number we can store: " + (Number.MAX_VALUE) + "<br/>";
+
+        					document.getElementById("six").innerHTML = "Minimum number we can store: " + (Number.MIN_VALUE) + "<br/>";
+
+        					document.getElementById("seven").innerHTML = "5 / 9 is rounded to two decimal places: " + ((n1/n2).toFixed(2)) + "<br/>";
+
+        					document.getElementById("eight").innerHTML = "5 will be incremented after the variable " + (n1++) + "<br/>";
+
+        					document.getElementById("nine").innerHTML = "9 will be incremented before the variable " + (++n2) + "<br/>";
+
+        					document.getElementById("ten").innerHTML = "5 will be incremented after the variable " + (n3--) + "<br/>";
+
+        					document.getElementById("eleven").innerHTML = "9 will be incremented before the variable " + (--n4) + "<br/>";
+
+        					document.getElementById("twelve").innerHTML = "A number will have 9 added and set equal to the value: " + (n5+=9) + "<br/>";
+
+        					document.getElementById("thirteen").innerHTML = "A number will have 9 subtracted and set equal to the value: " + (n5-=9) + "<br/>";
+
+        					document.getElementById("fourteen").innerHTML = "A number will have 9 multiplied by and set equal to the value: " + (n5*=9) + "<br/>";
+
+        					document.getElementById("fifteen").innerHTML = "A number will have 9 divided by and set equal to the value: " + (n5/=9) + "<br/>";
 
         				</script>
 
         				<hr/>
+
+                <p>&lt;p id="one"&gt;...&lt;/p&gt;<br />&lt;p id="two"&gt;...&lt;/p&gt;<br />&lt;p id="three"&gt;...&lt;/p&gt;<br />&lt;p id="four"&gt;...&lt;/p&gt;<br />&lt;p id="five"&gt;...&lt;/p&gt;<br />&lt;p id="six"&gt;...&lt;/p&gt;<br />&lt;p id="seven"&gt;...&lt;/p&gt;<br />&lt;p id="eight"&gt;...&lt;/p&gt;<br />&lt;small&gt;notice how the variable did not change, but the actual value is 6.&lt;/small&gt;<br />&lt;p&gt;&lt;/p&gt;<br />&lt;p id="nine"&gt;...&lt;/p&gt;<br />&lt;p id="ten"&gt;...&lt;/p&gt;<br />&lt;p id="eleven"&gt;...&lt;/p&gt;<br />&lt;p id="twelve"&gt;...&lt;/p&gt;<br />&lt;p id="thirteen"&gt;...&lt;/p&gt;<br />&lt;p id="fourteen"&gt;...&lt;/p&gt;<br />&lt;p id="fifteen"&gt;...&lt;/p&gt;</p>
+                <p><strong>&lt;script&gt;</strong><br />// create a variable userName<br />// that will prompt the user to enter their name<br />var n1 = 5;<br />var n3 = 5;<br />var n2 = 9;<br />var n4 = 9;<br />var n5 = 1;<br />var n6 = 2;<br />var n7 = 3;<br />var n8 = 4;<br /><br />document.getElementById("one").innerHTML = "Addition: 5 + 9 = " + (n1 + n2) + "&lt;br/&gt;";<br /><br />document.getElementById("two").innerHTML = "Subtraction: 5 - 9 = " + (n1 - n2) + "&lt;br/&gt;";<br /><br />document.getElementById("three").innerHTML = "Multiplication: 5 * 9 = " + (n1 * n2) + "&lt;br/&gt;";<br /><br />document.getElementById("four").innerHTML = "Division: 5 / 9 = " + (n1 / n2) + "&lt;br/&gt;";<br /><br />document.getElementById("five").innerHTML = "Maximum number we can store: " + (Number.MAX_VALUE) + "&lt;br/&gt;";<br /><br />document.getElementById("six").innerHTML = "Minimum number we can store: " + (Number.MIN_VALUE) + "&lt;br/&gt;";<br /><br />document.getElementById("seven").innerHTML = "5 / 9 is rounded to two decimal places: " + ((n1/n2).toFixed(2)) + "&lt;br/&gt;";<br /><br />document.getElementById("eight").innerHTML = "5 will be incremented after the variable " + (n1++) + "&lt;br/&gt;";<br /><br />document.getElementById("nine").innerHTML = "9 will be incremented before the variable " + (++n2) + "&lt;br/&gt;";<br /><br />document.getElementById("ten").innerHTML = "5 will be incremented after the variable " + (n3--) + "&lt;br/&gt;";<br /><br />document.getElementById("eleven").innerHTML = "9 will be incremented before the variable " + (--n4) + "&lt;br/&gt;";<br /><br />document.getElementById("twelve").innerHTML = "A number will have 9 added and set equal to the value: " + (n5+=9) + "&lt;br/&gt;";<br /><br />document.getElementById("thirteen").innerHTML = "A number will have 9 subtracted and set equal to the value: " + (n5-=9) + "&lt;br/&gt;";<br /><br />document.getElementById("fourteen").innerHTML = "A number will have 9 multiplied by and set equal to the value: " + (n5*=9) + "&lt;br/&gt;";<br /><br />document.getElementById("fifteen").innerHTML = "A number will have 9 divided by and set equal to the value: " + (n5/=9) + "&lt;br/&gt;";<br /><br /><strong>&lt;/script&gt;</strong></p>
+                <p> </p>
+
+                <hr />
 
         			</div>
           </ul>
