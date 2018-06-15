@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Javascript tutorials">
+    <meta name="author" content="xRzy">
+
+    <title>Javascript Tutorial</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Stylesheet link to the external css file -->
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Javascript Link to the external js file -->
+	<script src="js/javascript.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://www.github.com/xrzy1985">xRzy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Javascript Tutorial</h1>
+          <p class="lead">This page will mainly for testing purposes.</p>
+          <ul class="list-unstyled">
+            <li>Boostrap 4, HTML5, CSS3, and Javascript (obviously)</li>
+        			<div style="padding:50px; min-height: 700px; min-width: 700px;">
+
+                <hr/>
+
+        				<h3>CONDITIONALS</h3>
+
+        				<script>
+
+        					// ---------- CONDITIONALS ----------
+        					// Relational Operators : == != > < >= <=
+        					// === : Equal value and type
+        					// Logical Operators : && \\ !
+
+        					var age = 8;
+
+        					if ((age >= 5) && (age <= 6)){
+        					  document.write("Go to Kindergarten<br />");
+        					} else if (age > 18) {
+        					  document.write("Go to College<br />");
+        					} else {
+        					  document.write("Go to Grade ", age - 5, "<br />");
+        					}
+
+        					 // if the left state returns true, the return is true
+        					document.write("true || false = ", true || false, "<br />");
+
+        					 // this will negate the true statement, returning false
+        					document.write("!true = ", ! true, "<br />");
+
+        					 // These two are equal because js knows they are; returns true
+        					document.write("\"5\" == 5 = ", ("5" == 5), "<br />");
+
+        					// These two are equal, but different data types; returns false
+        					document.write("\"5\" === 5 = ", ("5" === 5), "<br />");
+
+        				</script>
+
+        				<hr/>
+
+        					<div id="crayon-5b22fd313f22f309878506-170" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// ---------- CONDITIONALS ----------</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-171" class="crayon-line" style="text-align: left;"><span class="crayon-c">// Relational Operators : == != &gt; &lt; &gt;= &lt;=</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-172" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// === : Equal value and type</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-173" class="crayon-line" style="text-align: left;"><span class="crayon-c">// Logical Operators : &amp;&amp; \\ !</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-174" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-175" class="crayon-line" style="text-align: left;"><span class="crayon-t">var</span> <span class="crayon-v">age</span> <span class="crayon-o">=</span> <span class="crayon-cn">8</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-176" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-177" class="crayon-line" style="text-align: left;"><span class="crayon-st">if</span> <span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-v">age</span> <span class="crayon-o">&gt;=</span> <span class="crayon-cn">5</span><span class="crayon-sy">)</span> <span class="crayon-o">&amp;&amp;</span> <span class="crayon-sy">(</span><span class="crayon-v">age</span> <span class="crayon-o">&lt;=</span> <span class="crayon-cn">6</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-178" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"Go to Kindergarten&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-179" class="crayon-line" style="text-align: left;"><span class="crayon-sy">}</span> <span class="crayon-st">else</span> <span class="crayon-st">if</span> <span class="crayon-sy">(</span><span class="crayon-v">age</span> <span class="crayon-o">&gt;</span> <span class="crayon-cn">18</span><span class="crayon-sy">)</span> <span class="crayon-sy">{</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-180" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"Go to College&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-181" class="crayon-line" style="text-align: left;"><span class="crayon-sy">}</span> <span class="crayon-st">else</span> <span class="crayon-sy">{</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-182" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"Go to Grade "</span><span class="crayon-sy">,</span> <span class="crayon-v">age</span> <span class="crayon-o">-</span> <span class="crayon-cn">5</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-183" class="crayon-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-184" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-185" class="crayon-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"true || false = "</span><span class="crayon-sy">,</span> <span class="crayon-t">true</span> <span class="crayon-o">||</span> <span class="crayon-t">false</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-186" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-187" class="crayon-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"!true = "</span><span class="crayon-sy">,</span> <span class="crayon-o">!</span> <span class="crayon-t">true</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-188" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-189" class="crayon-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"\"5\" == 5 = "</span><span class="crayon-sy">,</span> <span class="crayon-sy">(</span><span class="crayon-s">"5"</span> <span class="crayon-o">==</span> <span class="crayon-cn">5</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-190" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-191" class="crayon-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"\"5\" === 5 = "</span><span class="crayon-sy">,</span> <span class="crayon-sy">(</span><span class="crayon-s">"5"</span> <span class="crayon-o">===</span> <span class="crayon-cn">5</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        				<hr />
+
+        			</div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>
