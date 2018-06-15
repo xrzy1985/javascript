@@ -52,7 +52,68 @@
             <li>Boostrap 4, HTML5, CSS3, and Javascript (obviously)</li>
         			<div style="padding:50px; min-height: 700px; min-width: 700px;">
 
-        				<!-- YOUR CODE GOES RIGHT HERE -->
+                <hr/>
+
+        				<h3>For Loop Statements</h3>
+
+        				<script>
+
+        					// for is a self contained looping structure
+        					// here we are looping from 0 to 20
+        					for(j = 0; j <= 20; j++){
+
+        					  // If j is divisible by 2 then skip it
+        					  if((j % 2) == 0){
+        						continue;
+        					  }
+
+        					  // If j is equal to 15 break completely out of the loop
+        					  if(j == 15){
+        						// this will make sure to print 15 and a blank space afterwards
+        						document.write(j, " ");
+        						// break will kick the execution out of the loop
+        						break;
+        					  }
+        					  // if the # isn't even or 15 then it'll reach this
+        					  // it'll print the n, n+1, n+2, ...n+n
+        					  document.write(j, ", ");
+        					}
+        					document.write("<br /><br />");
+
+        					 // Key : Value pairs
+        					var customer = {name : "John Doe", address : "123 Main St.", balance : 1010.52};
+
+        					// for in cycles through an enumerable properties of an object
+        					for(k in customer){
+        					  document.write(customer[k], "<br />");
+        					}			
+
+        				</script>
+
+        				<hr/>
+        					<div id="crayon-5b22fd313f22f309878506-231" class="crayon-line" style="text-align: left;"><span class="crayon-c">// for is a self contained looping structure</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-232" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-st">for</span><span class="crayon-sy">(</span><span class="crayon-v">j</span> <span class="crayon-o">=</span> <span class="crayon-cn">0</span><span class="crayon-sy">;</span> <span class="crayon-v">j</span> <span class="crayon-o">&lt;=</span> <span class="crayon-cn">20</span><span class="crayon-sy">;</span> <span class="crayon-v">j</span><span class="crayon-o">++</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-233" class="crayon-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-234" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-c">// If j is divisible by 2 then skip back to the top of the loop</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-235" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-v">j</span> <span class="crayon-o">%</span> <span class="crayon-cn">2</span><span class="crayon-sy">)</span> <span class="crayon-o">==</span> <span class="crayon-cn">0</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-236" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">    </span><span class="crayon-st">continue</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-237" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-sy">}</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-238" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-239" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-c">// If j is equal to 15 break completely out of the loop</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-240" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-v">j</span> <span class="crayon-o">==</span> <span class="crayon-cn">15</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-241" class="crayon-line" style="text-align: left;"><span class="crayon-h">    </span><span class="crayon-st">break</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-242" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-sy">}</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-243" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-v">j</span><span class="crayon-sy">,</span> <span class="crayon-s">", "</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-244" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-245" class="crayon-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-246" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-247" class="crayon-line" style="text-align: left;"><span class="crayon-t">var</span> <span class="crayon-v">customer</span> <span class="crayon-o">=</span> <span class="crayon-sy">{</span><span class="crayon-r">name</span> <span class="crayon-o">:</span> <span class="crayon-s">"Bob Thomas"</span><span class="crayon-sy">,</span> <span class="crayon-v">address</span> <span class="crayon-o">:</span> <span class="crayon-s">"123 Main"</span><span class="crayon-sy">,</span> <span class="crayon-v">balance</span> <span class="crayon-o">:</span> <span class="crayon-cn">50.50</span><span class="crayon-sy">}</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-248" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        					<div id="crayon-5b22fd313f22f309878506-249" class="crayon-line" style="text-align: left;"><span class="crayon-c">// for in cycles through an enumerable properties of an object</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-250" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-st">for</span><span class="crayon-sy">(</span><span class="crayon-i">k</span> <span class="crayon-st">in</span> <span class="crayon-v">customer</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-251" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-v">customer</span><span class="crayon-sy">[</span><span class="crayon-v">k</span><span class="crayon-sy">]</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+        					<div id="crayon-5b22fd313f22f309878506-252" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+        				<hr/>
 
         			</div>
           </ul>
