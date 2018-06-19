@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Javascript tutorials">
+    <meta name="author" content="xRzy">
+
+    <title>Javascript Tutorial</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Stylesheet link to the external css file -->
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Javascript Link to the external js file -->
+	<script src="js/javascript.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://www.github.com/xrzy1985">xRzy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Javascript Tutorial</h1>
+          <p class="lead">This page will mainly for testing purposes.</p>
+          <ul class="list-unstyled">
+            <li>Boostrap 4, HTML5, CSS3, and Javascript (obviously)</li>
+        			<div style="padding:50px; min-height: 700px; min-width: 700px;">
+
+                <hr/>
+
+        				<h3>Functions</h3>
+
+        				<script>
+
+        					// ---------- FUNCTIONS ----------
+        					// Functions provide code reuse and eliminate repetitive code
+
+        					// Define a function that checks if a value is in an array
+        					function inArray(arrayToCheck, value){
+        					  // we are looping through until the end of the array
+        					  for(i = 0; i < arrayToCheck.length; i++){
+        						// the array index has to be the same datatype and equal to value
+        						if(arrayToCheck[i] === value){
+        						  // if it is; then return true
+        						  return true;
+        						}
+        					  }
+        					  // if the value is not in the array, then we return false
+        					  return false;
+        					}
+
+        					document.write("<hr>"); <!-- ============================================ -->
+        					// func(param, param2)
+
+        					// Let us create an array of numbers
+        					var arr = [1,2,3,4,5];
+        					document.write(arr, "<br />");
+
+        					//  true if 4 is in the array, and fale if it isn't
+        					document.write("Is 4 in the array: ", inArray(arr, 4), "<br />");
+        					document.write("Is 14 in the array: ", inArray(arr, 14), "<br />");
+
+        					document.write("<hr>"); <!-- ============================================ -->
+        					// func(param)
+
+        					// Local variables defined in functions can't be accessed outside of
+        					// the function
+        					function times2(num){
+        					  var var2 = 2;
+        					  return num * var2;
+        					}
+
+        					// The following code will not compile and run because var2 is
+        					// a local variable inside of times2(). You cannot access it
+        					// ERROR : document.write("Val of var2 : ", var2, "<br />");
+
+        					// You can access it the proper way though
+        					document.write("Value of times2(2): ", times2(2), "<br />");
+
+        					document.write("<hr>"); <!-- ============================================ -->
+        					// func(func2, param)  -> essentially func(func2(param))
+
+        					// Here, we are defining a function with one parameter; num (number)
+        					function times3(num){
+
+        					  // this function returns (num x 3)
+        					  return num * 3;
+        					}
+
+        					// This function takes a function as a parameter and a number (num)
+        					function multiply(func, num){
+
+        					  // return the value of function being passed num as a parameter
+        					  return func(num);
+        					}
+
+        					// Finally, write the data out to the body
+        					// essentially using multiply(times3(15)) like this
+        					document.write("3 * 15 = ", multiply(times3, 15), "<br />");
+
+        					// I can see the code above being useful if you have a user_Id
+        					// that is associated with a few attributes, clock in, clock out,
+        					// pay, hours, etc. You can set up a function to take multiple
+        					// funtions as a parameter, and pass a variable along with it to be
+        					// automatically passed as a parameter. So, if we have a bunch
+        					// of functions that have a int parameter, such as a user_id, then
+        					// we could effectively gather a lot of data just by using the same
+        					// value parameters
+
+        					// You can literally store a function as a variable
+        					// here we are storing a function with num as a paramter
+        					var triple = function(num){
+
+        					  // we return (num x 3)
+        					  return num * 3;
+                  };
+        					document.write("3 * 45 = ", multiply(triple, 45), "<br />");
+
+        					document.write("<hr>"); <!-- ============================================ -->
+        					// func() -> even though we will pass variables, the func will know what to do
+
+        					// Receive variable number of arguments
+        					// Here, you notice getSum doesn't have a parameter
+        					function getSum(){
+        					  // setting sum to 0 to initialize it
+        					  var sum = 0;
+
+        					  // we will loop through the arguments that will or will not be passed
+        					  for(i = 0; i < arguments.length; i++){
+
+        					    // add and set equal to the sum + the arguments[specific index]
+        						sum += arguments[i];
+        					  }
+
+        					  // return the sum
+        					  return sum;
+        					}
+
+        					// write out to html getSum(with numbers)
+        					document.write("Sum : ", getSum(1,2,3,4,5), "<br />");
+
+        					document.write("<hr>"); <!-- ============================================ -->
+        					// func(n1, n2, n3, ... nN)  ->   You can pass in as many variables as you wish
+
+        					// Return a variable number of values
+        					function times2(theArray){
+
+        					  // create a new array; empty
+        					  var newArray = [];
+
+        					  // a for loop to push all values from arguments to the new array
+        					  for(i = 0; i < theArray.length; i++){
+
+        					    // we are multiplying the values by 2 before storage
+        						newArray.push(theArray[i] * 2);
+        					  }
+
+        					  // return the new multiplied array
+        					  return newArray;
+        					}
+
+        					document.write("Array Doubled : ", times2([1,2,3,4,5]).toString(), "<br />");
+
+
+        					document.write("<hr>"); <!-- ============================================ -->
+        					// func(param)
+
+        					// Recursive Function
+        					function factorial(num){
+
+        					  // if the argument is less than or equal to 1
+        					  if(num <= 1){
+
+        						// return a 1
+        						return 1;
+
+        					  // Here is the heart of factorial
+        					  } else {
+
+        						// return the factorial calculations
+
+        						return num * factorial(num - 1);
+        					  }
+        					}
+
+        					document.write("Factorial of 4 : ", factorial(4), "<br />");
+
+        					// 1st: num = 4 * factorial(3) = 4 * 6 = 24
+        					// 2nd: num = 3 * factorial(2) = 3 * 2 = 6
+        					// 3rd: num = 2 * factorial(1) = 2 * 1 = 2
+
+
+        					document.write("<hr>"); <!-- ============================================ -->
+
+        				</script>
+
+        				<hr/>
+                  <div id="crayon-5b22fd313f22f309878506-310" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// ---------- FUNCTIONS ----------</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-311" class="crayon-line" style="text-align: left;"><span class="crayon-c">// Functions provide code reuse and eliminate repetitive code</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-312" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-313" class="crayon-line" style="text-align: left;"><span class="crayon-c">// Define a function that checks if a value is in an array</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-314" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-t">function</span> <span class="crayon-e">inArray</span><span class="crayon-sy">(</span><span class="crayon-v">arrayToCheck</span><span class="crayon-sy">,</span> <span class="crayon-v">value</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-315" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">for</span><span class="crayon-sy">(</span><span class="crayon-v">i</span> <span class="crayon-o">=</span> <span class="crayon-cn">0</span><span class="crayon-sy">;</span> <span class="crayon-v">i</span> <span class="crayon-o">&lt;</span> <span class="crayon-v">arrayToCheck</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">;</span> <span class="crayon-v">i</span><span class="crayon-o">++</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-316" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">    </span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-v">arrayToCheck</span><span class="crayon-sy">[</span><span class="crayon-v">i</span><span class="crayon-sy">]</span> <span class="crayon-o">===</span> <span class="crayon-v">value</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-317" class="crayon-line" style="text-align: left;"><span class="crayon-h">      </span><span class="crayon-st">return</span> <span class="crayon-t">true</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-318" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">    </span><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-319" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-320" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">return</span> <span class="crayon-t">false</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-321" class="crayon-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-322" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-323" class="crayon-line" style="text-align: left;"><span class="crayon-t">var</span> <span class="crayon-v">randArray</span> <span class="crayon-o">=</span> <span class="crayon-sy">[</span><span class="crayon-cn">1</span><span class="crayon-sy">,</span><span class="crayon-cn">2</span><span class="crayon-sy">,</span><span class="crayon-cn">3</span><span class="crayon-sy">,</span><span class="crayon-cn">4</span><span class="crayon-sy">,</span><span class="crayon-cn">5</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-324" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-325" class="crayon-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"In Array : "</span><span class="crayon-sy">,</span> <span class="crayon-e">inArray</span><span class="crayon-sy">(</span><span class="crayon-v">randArray</span><span class="crayon-sy">,</span> <span class="crayon-cn">4</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-326" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-327" class="crayon-line" style="text-align: left;"><span class="crayon-c">// Local variables defined in functions can't be accessed outside of</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-328" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// the function</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-329" class="crayon-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-330" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-t">function</span> <span class="crayon-e">times2</span><span class="crayon-sy">(</span><span class="crayon-v">num</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-331" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-t">var</span> <span class="crayon-v">var2</span> <span class="crayon-o">=</span> <span class="crayon-cn">2</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-332" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">return</span> <span class="crayon-v">num</span> <span class="crayon-o">*</span> <span class="crayon-v">var2</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-333" class="crayon-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-334" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-335" class="crayon-line" style="text-align: left;"><span class="crayon-c">// Causes Error : document.write("Val of var2 : ", var2, "&lt;br /&gt;");</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-336" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-337" class="crayon-line" style="text-align: left;"><span class="crayon-c">// Pass a function as a parameter</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-338" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-t">function</span> <span class="crayon-e">times3</span><span class="crayon-sy">(</span><span class="crayon-v">num</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-339" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">return</span> <span class="crayon-v">num</span> <span class="crayon-o">*</span> <span class="crayon-cn">3</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-340" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-341" class="crayon-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-342" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-t">function</span> <span class="crayon-e">multiply</span><span class="crayon-sy">(</span><span class="crayon-v">func</span><span class="crayon-sy">,</span> <span class="crayon-v">num</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-343" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">return</span> <span class="crayon-e">func</span><span class="crayon-sy">(</span><span class="crayon-v">num</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-344" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-345" class="crayon-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-346" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"3 * 15 = "</span><span class="crayon-sy">,</span> <span class="crayon-e">multiply</span><span class="crayon-sy">(</span><span class="crayon-v">times3</span><span class="crayon-sy">,</span> <span class="crayon-cn">15</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-347" class="crayon-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-348" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// Define a function expression</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-349" class="crayon-line" style="text-align: left;"><span class="crayon-c">// We can assign functions to variables, store them in arrays,</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-350" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// pass them into other functions and return them from functions</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-351" class="crayon-line" style="text-align: left;"><span class="crayon-t">var</span> <span class="crayon-v">triple</span> <span class="crayon-o">=</span> <span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">num</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-352" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">return</span> <span class="crayon-v">num</span> <span class="crayon-o">*</span> <span class="crayon-cn">3</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-353" class="crayon-line" style="text-align: left;"><span class="crayon-sy">}</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-354" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-355" class="crayon-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"3 * 45 = "</span><span class="crayon-sy">,</span> <span class="crayon-e">multiply</span><span class="crayon-sy">(</span><span class="crayon-v">triple</span><span class="crayon-sy">,</span> <span class="crayon-cn">45</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-356" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-357" class="crayon-line" style="text-align: left;"><span class="crayon-c">// Receive variable number of arguments</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-358" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-t">function</span> <span class="crayon-e">getSum</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-359" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-t">var</span> <span class="crayon-v">sum</span> <span class="crayon-o">=</span> <span class="crayon-cn">0</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-360" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">for</span><span class="crayon-sy">(</span><span class="crayon-v">i</span> <span class="crayon-o">=</span> <span class="crayon-cn">0</span><span class="crayon-sy">;</span> <span class="crayon-v">i</span> <span class="crayon-o">&lt;</span> <span class="crayon-v">arguments</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">;</span> <span class="crayon-v">i</span><span class="crayon-o">++</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-361" class="crayon-line" style="text-align: left;"><span class="crayon-h">    </span><span class="crayon-v">sum</span> <span class="crayon-o">+=</span> <span class="crayon-r">arguments</span><span class="crayon-sy">[</span><span class="crayon-v">i</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-362" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-363" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">return</span> <span class="crayon-v">sum</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-364" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-365" class="crayon-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-366" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"Sum : "</span><span class="crayon-sy">,</span> <span class="crayon-e">getSum</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">,</span><span class="crayon-cn">2</span><span class="crayon-sy">,</span><span class="crayon-cn">3</span><span class="crayon-sy">,</span><span class="crayon-cn">4</span><span class="crayon-sy">,</span><span class="crayon-cn">5</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-367" class="crayon-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-368" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// Return a variable number of values</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-369" class="crayon-line" style="text-align: left;"><span class="crayon-t">function</span> <span class="crayon-e">times2</span><span class="crayon-sy">(</span><span class="crayon-v">theArray</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-370" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-371" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-t">var</span> <span class="crayon-v">newArray</span> <span class="crayon-o">=</span> <span class="crayon-sy">[</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-372" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">for</span><span class="crayon-sy">(</span><span class="crayon-v">i</span> <span class="crayon-o">=</span> <span class="crayon-cn">0</span><span class="crayon-sy">;</span> <span class="crayon-v">i</span> <span class="crayon-o">&lt;</span> <span class="crayon-v">theArray</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">;</span> <span class="crayon-v">i</span><span class="crayon-o">++</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-373" class="crayon-line" style="text-align: left;"><span class="crayon-h">    </span><span class="crayon-v">newArray</span><span class="crayon-sy">.</span><span class="crayon-e">push</span><span class="crayon-sy">(</span><span class="crayon-v">theArray</span><span class="crayon-sy">[</span><span class="crayon-v">i</span><span class="crayon-sy">]</span> <span class="crayon-o">*</span> <span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-374" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-375" class="crayon-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">return</span> <span class="crayon-v">newArray</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-376" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-377" class="crayon-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-378" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"Array Doubled : "</span><span class="crayon-sy">,</span> <span class="crayon-e">times2</span><span class="crayon-sy">(</span><span class="crayon-sy">[</span><span class="crayon-cn">1</span><span class="crayon-sy">,</span><span class="crayon-cn">2</span><span class="crayon-sy">,</span><span class="crayon-cn">3</span><span class="crayon-sy">,</span><span class="crayon-cn">4</span><span class="crayon-sy">,</span><span class="crayon-cn">5</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toString</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-379" class="crayon-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-380" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// Recursive Function</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-381" class="crayon-line" style="text-align: left;"><span class="crayon-t">function</span> <span class="crayon-e">factorial</span><span class="crayon-sy">(</span><span class="crayon-v">num</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-382" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-v">num</span> <span class="crayon-o">&lt;=</span> <span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-383" class="crayon-line" style="text-align: left;"><span class="crayon-h">    </span><span class="crayon-st">return</span> <span class="crayon-cn">1</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-384" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-sy">}</span> <span class="crayon-st">else</span> <span class="crayon-sy">{</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-385" class="crayon-line" style="text-align: left;"><span class="crayon-h">    </span><span class="crayon-st">return</span> <span class="crayon-v">num</span> <span class="crayon-o">*</span> <span class="crayon-e">factorial</span><span class="crayon-sy">(</span><span class="crayon-v">num</span> <span class="crayon-o">-</span> <span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-386" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-h">  </span><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-387" class="crayon-line" style="text-align: left;"><span class="crayon-sy">}</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-388" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-389" class="crayon-line" style="text-align: left;"><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">"Factorial of 4 : "</span><span class="crayon-sy">,</span> <span class="crayon-e">factorial</span><span class="crayon-sy">(</span><span class="crayon-cn">4</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span> <span class="crayon-s">"&lt;br /&gt;"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-390" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+                  <div id="crayon-5b22fd313f22f309878506-391" class="crayon-line" style="text-align: left;"><span class="crayon-c">// 1st: num = 4 * factorial(3) = 4 * 6 = 24</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-392" class="crayon-line crayon-striped-line" style="text-align: left;"><span class="crayon-c">// 2nd: num = 3 * factorial(2) = 3 * 2 = 6</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-393" class="crayon-line" style="text-align: left;"><span class="crayon-c">// 3rd: num = 2 * factorial(1) = 2 * 1 = 2</span></div>
+                  <div id="crayon-5b22fd313f22f309878506-394" class="crayon-line crayon-striped-line" style="text-align: left;"> </div>
+        				<hr/>
+
+        			</div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>
